@@ -4,8 +4,8 @@ namespace Laborator3
 {
     abstract class WithdrawalFeeCalculator
         {
-            public decimal CalculateAmountToWithdraw(Account account,decimal amount)
-            {
+            public decimal CalculateAmountToWithdraw(decimal amount)
+        {
                 var commision = CalculateCommision(amount);
                 return amount + commision;
             }
