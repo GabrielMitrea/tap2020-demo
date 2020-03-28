@@ -2,7 +2,7 @@
 
 namespace Laborator3
 {
-    class DepositAccount : AccountBase
+    class DepositAccount : DepositAccountBase
     {
         
     }
