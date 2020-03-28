@@ -1,6 +1,6 @@
 ﻿namespace Laborator3
 {
-    class Savings : Account
+    class SavingsAccount : Account
     {
         
     }
