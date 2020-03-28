@@ -2,7 +2,7 @@
 
 namespace Laborator3
 {
-    abstract partial class Account:AccountBase
+    abstract partial class WithdrawlAndDepositAccount:DepositAccountBase
     { 
        
         public decimal Withdraw(decimal amount)

@@ -1,6 +1,6 @@
 ﻿namespace Laborator3
 {
-    class CreditAccount : Account
+    class CreditAccount : WithdrawlAndDepositAccount
     {
        
     }

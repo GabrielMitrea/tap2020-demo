@@ -7,19 +7,23 @@ namespace Laborator3
         static void Main(string[] args)
         {
             var debitCalculator = new DebitAccountWithdrawalFeeCalculator();
-            Account debitAccount = new DebitAccount();
-            debitAccount.Deposit(100);
+            WithdrawlAndDepositAccount debitAccount = new DebitAccount();
+            DepositMoneyTo(debitAccount, 100);
             WithdrawMoneyFrom(debitAccount,50,debitCalculator);
 
             var creditCalculator = new CreditAccountWithdrawalFeeCalculator();
-            Account creditAccount = new CreditAccount();
-            creditAccount.Deposit(100);
+            WithdrawlAndDepositAccount creditAccount = new CreditAccount();
+            DepositMoneyTo(creditAccount, 100);
             WithdrawMoneyFrom(creditAccount, 150, creditCalculator);
 
            
 
         }
-        static void WithdrawMoneyFrom(Account account, decimal amount, WithdrawalFeeCalculator withdrawalFeeCalculator)
+        static void DepositMoneyTo(DepositAccountBase depositAccount, decimal amount)
+        {
+            depositAccount.Deposit(amount);
+        }
+        static void WithdrawMoneyFrom(WithdrawlAndDepositAccount account, decimal amount, WithdrawalFeeCalculator withdrawalFeeCalculator)
         {
             var totalAmount = withdrawalFeeCalculator.CalculateAmountToWithdraw(amount);
             if(totalAmount>account.Amount)

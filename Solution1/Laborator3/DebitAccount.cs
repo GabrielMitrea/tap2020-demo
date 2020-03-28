@@ -1,6 +1,6 @@
 ﻿namespace Laborator3
 {
-    class DebitAccount : Account
+    class DebitAccount : WithdrawlAndDepositAccount
     {
       
     }

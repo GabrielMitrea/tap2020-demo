@@ -1,6 +1,6 @@
 ﻿namespace Laborator3
 {
-    abstract class AccountBase
+    abstract class DepositAccountBase
     {
         public string Iban { get; set; }
         public decimal Amount { get; protected set; }
