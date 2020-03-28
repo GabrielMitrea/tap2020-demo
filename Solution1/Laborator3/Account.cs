@@ -2,10 +2,9 @@
 
 namespace Laborator3
 {
-    abstract partial class Account
+    abstract partial class Account:AccountBase
     { 
-        public string Iban { get; set; }
-        public decimal Amount { get; private set; }
+       
         public decimal Withdraw(decimal amount)
         {
             return WithdrawInternal(amount);
@@ -20,10 +19,7 @@ namespace Laborator3
             Amount -= amount;
             return amount;
         }
-        public void Deposit(decimal amount)
-        {
-            Amount += amount;
-        }
+        
     }
     
 }

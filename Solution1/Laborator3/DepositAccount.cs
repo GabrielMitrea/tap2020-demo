@@ -2,11 +2,8 @@
 
 namespace Laborator3
 {
-    class DepositAccount : Account
+    class DepositAccount : AccountBase
     {
-        protected override decimal WithdrawInternal(decimal amount)
-        {
-            throw new InvalidOperationException("Cannot withdraw from Deposit account");
-        }
+        
     }
 }
